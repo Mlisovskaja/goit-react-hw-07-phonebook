@@ -1,8 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-const ContactsPage = lazy(() => import('../components/Pages/ContactsPage'));
-const NotFoundPage = lazy(() => import('../components/Pages/NotFoundPage'));
+const ContactsPage = lazy(() => import('../Pages/ContactsPage'));
+const NotFoundPage = lazy(() => import('../Pages/NotFoundPage'));
 
 const UserRoutes = () => {
   return (

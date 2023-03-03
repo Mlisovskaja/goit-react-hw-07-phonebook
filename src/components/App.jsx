@@ -4,7 +4,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import UserRoutes from './UserRoutes';
 
-import { store, persistor } from './redux/store';
+import { store, persistor } from '../redux/store';
 
 function App() {
   return (
