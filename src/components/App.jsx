@@ -1,16 +1,21 @@
-export const App = () => {
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+
+import UserRoutes from './UserRoutes';
+
+import { store, persistor } from './redux/store';
+
+function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter basename="/goit-react-hw-07-phonebook">
+          <UserRoutes />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   );
-};
+}
+
+export default App;
