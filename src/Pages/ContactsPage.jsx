@@ -49,7 +49,6 @@ const ContactsPage = () => {
           contacts={filteredContacts}
         />
       )}
-      {/* {!isName && <p>No contacts in list</p>} */}
     </>
   );
 };

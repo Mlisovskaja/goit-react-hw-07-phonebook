@@ -8,6 +8,6 @@ export const getFilteredContacts = ({contacts, filter}) => {
     const result = contacts.items.filter(({ name }) => {
         return name.toLowerCase().includes(normalizedFilter);
     })
-
+    
     return result;
 }
